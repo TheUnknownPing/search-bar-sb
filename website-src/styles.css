@@ -1,0 +1,206 @@
+/* Import and Default stuff */
+
+:root {
+    color: white;
+}  
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+body {
+    background: #2D3142;
+    font-family: 'Raleway', sans-serif;
+}
+
+html{
+    height: 100%;
+}
+
+body::-webkit-scrollbar{
+    width: 0.35rem;
+}
+
+body::-webkit-scrollbar-track{
+    background: #202027;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: rgb(19, 20, 20);
+}
+
+a {
+    color: #BFC0C0;
+}
+
+/* Layout */
+
+main {
+    display: grid;
+    grid-template-areas:
+        "topbar  topbar  topbar"
+        "content content content"
+        "footer  footer  footer";
+
+        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-rows: auto auto auto;
+
+        gap: 0 50px;
+
+        text-align: center;
+}
+
+/* Header */
+
+.headerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+    height: 7.5vh;
+}
+
+.headerMenu a:link {
+    text-decoration: underline;
+}
+
+.headerMenu a:hover {
+    text-decoration: none;
+}
+
+/* Article */
+
+.landingPage {
+    /* Header + this + Footer = 100vh */
+    height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landingPage .websiteTitle a {
+    font-size: 2em;
+    padding: 1vh;
+    border: 2px solid #BFC0C0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.searchBar {
+    width: 30%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 2px solid #BFC0C0;
+    box-sizing: border-box;
+
+    background-color:#3D3142;
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.searchBar input {
+    flex-grow: 1;
+    color: #BFC0C0;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    vertical-align: middle;
+
+    background-color:#3D3142;
+    color:#BFC0C0;
+    border: 0;
+    text-decoration: none;
+}
+
+.searchBar input::before{
+    color: black;
+}
+
+.button {
+    display: inline-flex;
+    height: 40px;
+    width: 150px;
+    border: 2px solid #BFC0C0;
+    margin: 20px 20px 20px 20px;
+    color: #BFC0C0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.button a {
+    position: relative;
+}
+
+#animationButton {
+    width: 100%;
+    height: 100%;
+    left: -200px;
+    background: #BFC0C0;
+    position: absolute;
+    transition: all .35s ease-Out;
+    bottom: 0;
+}
+
+.button:hover #animationButton {
+    left: 0;
+}
+
+.button:hover a {
+    color: #2D3142;
+}
+
+/* Footer */
+.footerMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0vh;
+    margin: 0;
+
+    height: 7.5vh;
+}
+
+.footerMenu a:link {
+    text-decoration: underline;
+}
+
+.footerMenu a:hover {
+    text-decoration: none;
+}
+
+ /* Default stuff for stuff */
+header  {
+    grid-area: topbar; 
+    background-color: #242734;
+    overflow: hidden;
+}
+article {
+    grid-area: content; 
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+footer  {
+    grid-area: footer;
+    background-color: #242734;
+    overflow: hidden;
+}
