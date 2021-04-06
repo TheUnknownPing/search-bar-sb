@@ -75,6 +75,13 @@ main {
     text-decoration: none;
 }
 
+.logo {
+    font-size: 5.5vh;
+    text-transform: uppercase;
+    text-decoration: none;
+    align-items: center;
+}
+
 /* Article */
 
 .landingPage {
@@ -102,13 +109,17 @@ main {
     border: 2px solid #BFC0C0;
     box-sizing: border-box;
 
-    background-color:#3D3142;
+    background-color:#242734;
 
     position: relative;
     display: flex;
     flex-direction: row;
     width: 30%;
     margin: 0 auto;
+}
+
+.searchBar a{
+    color: #2D3142;
 }
 
 .searchBar input {
@@ -118,7 +129,7 @@ main {
     line-height: 2.4rem;
     vertical-align: middle;
 
-    background-color:#3D3142;
+    background-color:#242734;
     color:#BFC0C0;
     border: 0;
     text-decoration: none;
@@ -126,6 +137,10 @@ main {
 
 .searchBar input::before{
     color: black;
+}
+
+textarea:focus, input:focus{
+    outline: none;
 }
 
 .button {
@@ -176,6 +191,7 @@ main {
     align-items: center;
     padding: 0vh;
     margin: 0;
+    font-size: 2vh;
 
     height: 7.5vh;
 }
