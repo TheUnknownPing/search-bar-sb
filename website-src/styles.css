@@ -76,10 +76,30 @@ main {
 }
 
 .logo {
+    position: absolute;
+    left: 10px;
+
     font-size: 5.5vh;
     text-transform: uppercase;
     text-decoration: none;
-    align-items: center;
+    align-items:initial;
+}
+
+.headerContents{
+    text-transform: uppercase;
+    text-decoration: none;
+    align-items:stretch;
+
+    position: absolute;
+    right: 10px;
+
+    display: table;
+}
+
+.headerContents .content{
+    display: table-cell;
+    padding-left: 10px;
+    font-size: 2vh;
 }
 
 /* Article */
@@ -103,7 +123,7 @@ main {
 }
 
 .searchBar {
-    width: 30%;
+    width: 45%;
     padding: 12px 20px;
     display: inline-block;
     border: 2px solid #BFC0C0;
@@ -114,7 +134,6 @@ main {
     position: relative;
     display: flex;
     flex-direction: row;
-    width: 30%;
     margin: 0 auto;
 }
 
