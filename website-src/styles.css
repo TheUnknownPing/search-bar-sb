@@ -2,6 +2,8 @@
 
 :root {
     color: white;
+    --tf_backgroundColor: #242734; /* #242734 */
+    --main_backgroundColor: #2D3142;
 }  
 
 *{
@@ -13,7 +15,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
 body {
-    background: #2D3142;
+    background: var(--main_backgroundColor);
     font-family: 'Raleway', sans-serif;
 }
 
@@ -129,12 +131,13 @@ main {
     border: 2px solid #BFC0C0;
     box-sizing: border-box;
 
-    background-color:#242734;
+    background-color:var(--tf_backgroundColor);
 
     position: relative;
     display: flex;
     flex-direction: row;
     margin: 0 auto;
+    box-shadow: 0px 0px 5px var(--tf_backgroundColor);
 }
 
 .searchBar a{
@@ -148,7 +151,7 @@ main {
     line-height: 2.4rem;
     vertical-align: middle;
 
-    background-color:#242734;
+    background-color:var(--tf_backgroundColor);
     color:#BFC0C0;
     border: 0;
     text-decoration: none;
@@ -178,6 +181,7 @@ textarea:focus, input:focus{
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    box-shadow: 0px 0px 7px var(--tf_backgroundColor);
 }
 
 .button a {
@@ -226,8 +230,9 @@ textarea:focus, input:focus{
  /* Default stuff for stuff */
 header  {
     grid-area: topbar; 
-    background-color: #242734;
+    background-color: var(--tf_backgroundColor);
     overflow: hidden;
+    box-shadow: 0px 0px 7px var(--tf_backgroundColor);
 }
 article {
     grid-area: content; 
@@ -236,6 +241,7 @@ article {
 }
 footer  {
     grid-area: footer;
-    background-color: #242734;
+    background-color: var(--tf_backgroundColor);
     overflow: hidden;
+    box-shadow: 0px 0px 7px var(--tf_backgroundColor);
 }
